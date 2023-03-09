@@ -1,17 +1,8 @@
 module.exports = {
   providerOptions: {
-    s3: {
-      getKey: (req, filename, metadata) => {
-        if (!metadata.user_id) {
-          throw new Error('No User ID passed in request')
-        }
-        return `${metadata.user_id}/${metadata.order_id}/${filename}`
-      },
-      key: process.env.AWS_KEY,
-      secret: process.env.AWS_SECRET,
-      bucket: process.env.AWS_BUCKET,
-      region: process.env.AWS_REGION,
-      useAccelerateEndpoint: false,
+    drive: {
+      key: process.env.GOOGLE_DRIVE_KEY,
+      secret: process.env.GOOGLE_DRIVE_SECRET,
     }
   },
   server: {
