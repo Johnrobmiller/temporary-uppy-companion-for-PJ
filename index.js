@@ -16,34 +16,23 @@ app.use(session({
 }))
 
 app.use((req, res, next) => {
+  // ! TODO: TURN BACK ON CORS BEFORE USING IN PRODUCTION
   res.setHeader(
     'Access-Control-Allow-Origin',
-    req.headers.origin || '*'
+    '*'
   )
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-  )
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Authorization, Origin, Content-Type, Accept, X-User-Id'
-  )
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    'http://localhost:3000'
-  )
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    'http://localhost:3001'
-  )
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    'http://localhost:3002'
-  )
-  res.setHeader(
-    'Access-Control-Allow-Origin',
-    'https://flyer-evolution.vercel.app'
-  )
+  // res.setHeader(
+  //   'Access-Control-Allow-Methods',
+  //   'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+  // )
+  // res.setHeader(
+  //   'Access-Control-Allow-Headers',
+  //   'Authorization, Origin, Content-Type, Accept, X-User-Id'
+  // )
+  // res.setHeader(
+  //   'Access-Control-Allow-Origin',
+  //   'https://flyer-evolution.vercel.app'
+  // )
   next()
 })
 
