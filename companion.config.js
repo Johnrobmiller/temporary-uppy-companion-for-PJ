@@ -14,7 +14,7 @@ module.exports = {
     protocol: process.env.COMPANION_PROTOCOL || 'http',
   },
   sendSelfEndpoint: process.env.COMPANION_SELF_ENDPOINT || 'localhost:3020',
-  filePath: process.env.COMPANION_UPLOAD_DIR || './uploads',
+  filePath: './',
   secret: process.env.COMPANION_SECRET,
   debug: process.env.DEBUG || false
 }
