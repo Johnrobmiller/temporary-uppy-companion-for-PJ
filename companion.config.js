@@ -3,6 +3,10 @@ module.exports = {
     drive: {
       key: process.env.GOOGLE_DRIVE_KEY,
       secret: process.env.GOOGLE_DRIVE_SECRET,
+    },
+    dropbox: {
+      key: process.env.UPLOADER_DROPBOX_KEY,
+      secret: process.env.UPLOADER_DROPBOX_SECRET
     }
   },
   server: {
