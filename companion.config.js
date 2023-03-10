@@ -14,10 +14,12 @@ module.exports = {
   server: {
     host: process.env.COMPANION_HOST,
     protocol: 'https',
-    path
+    path,
   },
   sendSelfEndpoint: process.env.COMPANION_SELF_ENDPOINT || 'localhost:3020',
   filePath: './uploads',
   secret: process.env.COMPANION_SECRET,
-  debug: process.env.DEBUG || false
+  debug: process.env.DEBUG || false,
+  // ! TODO: TURN TO TRUE BEFORE USING IN PRODUCTION
+  corsOrigins: false
 }
