@@ -46,6 +46,6 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ message: err.message, error: err })
 })
 
-companion.socket(app.listen(process.env.APP_PORT), companionConfig)
+companion.socket(app.listen(0), companionConfig)
 
 console.log('Welcome to Companion!')
