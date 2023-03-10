@@ -30,7 +30,19 @@ app.use((req, res, next) => {
   )
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://temporary-uppy-companion-for-pj-production.up.railway.app'
+    'http://localhost:3000'
+  )
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'http://localhost:3001'
+  )
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'http://localhost:3002'
+  )
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://flyer-evolution.vercel.app'
   )
   next()
 })
