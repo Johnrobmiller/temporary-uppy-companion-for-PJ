@@ -28,6 +28,10 @@ app.use((req, res, next) => {
     'Access-Control-Allow-Headers',
     'Authorization, Origin, Content-Type, Accept, X-User-Id'
   )
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'https://temporary-uppy-companion-for-pj-production.up.railway.app'
+  )
   next()
 })
 
