@@ -1,3 +1,5 @@
+const path = '/'
+
 module.exports = {
   providerOptions: {
     drive: {
@@ -10,11 +12,12 @@ module.exports = {
     }
   },
   server: {
-    host: process.env.COMPANION_HOST || 'localhost:3020',
-    protocol: process.env.COMPANION_PROTOCOL || 'http',
+    host: process.env.COMPANION_HOST,
+    protocol: 'https',
+    path
   },
   sendSelfEndpoint: process.env.COMPANION_SELF_ENDPOINT || 'localhost:3020',
-  filePath: './',
+  filePath: './uploads',
   secret: process.env.COMPANION_SECRET,
   debug: process.env.DEBUG || false
 }
